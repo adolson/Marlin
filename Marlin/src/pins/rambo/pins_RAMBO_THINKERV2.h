@@ -34,13 +34,20 @@
   #define FIL_RUNOUT_PIN                      10
 #endif
 
-#if HAS_WIRED_LCD || TOUCH_UI_ULTIPANEL
-  #if ENABLED(ULTIPANEL) || TOUCH_UI_ULTIPANEL
-    #if NONE(VIKI2, miniVIKI)
-      #define BTN_EN1                         64
-      #define BTN_EN2                         63
-    #endif
-  #endif
+#if ENABLED(BLTOUCH)
+  #define Z_MIN_PIN    22
+#elif ENABLED(FIX_MOUNTED_PROBE)
+  #define Z_MIN_PIN    4 //24
+#else
+  #define Z_MIN_PIN    10
 #endif
+
+// Eryone has the fan pins reversed
+#define FAN1_PIN       6
+#define FAN2_PIN       2
+
+// set the encoder pins
+#define BTN_EN1                         64
+#define BTN_EN2                         63
 
 #include "pins_RAMBO.h"
