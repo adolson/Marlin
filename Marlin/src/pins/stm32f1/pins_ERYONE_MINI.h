@@ -27,7 +27,9 @@
 //#define DISABLE_DEBUG
 #define DISABLE_JTAG
 //#define ENABLE_SPI3
-#define FLASH_EEPROM_EMULATION
+// disabled this because it causes hanging
+//#define FLASH_EEPROM_EMULATION
+#define SDCARD_EEPROM_EMULATION
 #define FAN_SOFT_PWM
 //
 // Servos
